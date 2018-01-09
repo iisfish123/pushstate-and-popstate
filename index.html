@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        /**
+         * params（监听标识，不用填，可填可不填）
+         * 最后一个参数，用于替换当前历史记录点  null a
+         * window.history.pushState('a','','?page=1')
+         * window.history.pushState是新增历史记录点,window.history.replaceState只替换当前页面Url，没有新增历史记录点
+         */
+        window.history.pushState('a','','');
+        window.onpopstate=function(event){
+            console.info(event.state);
+            if(event.state=='a')alert(1111);
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    一页
+</div>
+
+</body>
+
+</html>
